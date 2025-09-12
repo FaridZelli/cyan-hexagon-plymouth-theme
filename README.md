@@ -15,3 +15,8 @@ Disable [simpledrm](https://fedoraproject.org/wiki/Changes/PlymouthUseSimpledrm#
 ```
 plymouth.use-simpledrm=0
 ```
+(Bonus) Disable the ambient light sensor in GDM:
+```
+machinectl shell gdm@ /bin/bash
+gsettings set org.gnome.settings-daemon.plugins.power ambient-enabled false
+```
